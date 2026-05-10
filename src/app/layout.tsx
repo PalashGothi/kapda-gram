@@ -15,8 +15,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "कपड़ा ग्राम | Premium Indian Handloom",
-  description: "Traditional Indian textile and handloom brand based in Ujjain, Madhya Pradesh, India. Specializing in Khadi, Silk, Banarasi, and more.",
+  title: "Kapda Gram | Premium Indian Handloom & Handicrafts",
+  description: "Authentic Indian handcrafted textiles, ethnic dress materials, and sustainable handmade handicrafts. Based in Ujjain, Madhya Pradesh, we celebrate artisan fabrics and traditional craftsmanship.",
+  keywords: ["Handloom fabrics India", "Indian handcrafted textiles", "Ethnic dress materials", "Handmade Indian handicrafts", "Sustainable Indian fashion", "Artisan fabrics", "Indian block print fabrics", "Handmade décor India", "Ujjain handloom store", "Indian craft products"],
 };
 
 export default function RootLayout({

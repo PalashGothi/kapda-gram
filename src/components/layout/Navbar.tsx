@@ -25,7 +25,7 @@ export default function Navbar() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between relative">
         <div className="hidden md:flex items-center space-x-8">
           <Link href="/about" className="text-sm font-medium hover:text-mutedgold transition-colors">
             Our Story
@@ -35,7 +35,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <Link href="/" className="text-3xl font-serif tracking-wide text-center absolute left-1/2 -translate-x-1/2">
+        <Link href="/" className="text-3xl font-serif tracking-wide text-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
           कपड़ा ग्राम
         </Link>
 

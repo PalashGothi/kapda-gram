@@ -40,19 +40,19 @@ export default function BrandStory() {
             className="w-full lg:w-1/2 space-y-8"
           >
             <div>
-              <span className="text-terracotta font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">Our Heritage</span>
+              <span className="text-terracotta font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">Our Brand Story</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-deepbrown dark:text-ivory leading-tight">
-                Rooted in Ujjain, <br />
-                <span className="italic font-light text-mutedgold">Woven for the World</span>
+                Authentic Craftsmanship, <br />
+                <span className="italic font-light text-mutedgold">Woven for You</span>
               </h2>
             </div>
             
             <div className="space-y-6 text-deepbrown/80 dark:text-sand/80 font-light text-lg leading-relaxed">
               <p>
-                Kapda Gram was born from a deep reverence for India's rich textile legacy. In the historic city of Ujjain, we partner with master artisans whose families have perfected the art of weaving over generations.
+                Kapda Gram celebrates the timeless beauty of Indian textiles and handcrafted artistry. Rooted in the spiritual and cultural city of Ujjain, the brand aims to preserve and promote India’s traditional weaving, dyeing, embroidery, and handmade craft techniques while bringing them to modern lifestyles.
               </p>
               <p>
-                Every thread we offer is a testament to mindful creation, honoring the earth and the hands that craft it. From the crispness of Khadi to the royal drape of Banarasi silk, our fabrics celebrate authentic imperfection and timeless elegance.
+                Every fabric and handcrafted product reflects artisan skill, cultural heritage, sustainable craftsmanship, handmade authenticity, and slow fashion values. We proudly support artisan communities and promote ethically handcrafted Indian products for conscious buyers.
               </p>
             </div>
 

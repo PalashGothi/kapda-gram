@@ -7,16 +7,28 @@ import { ArrowRight } from "lucide-react";
 
 const categories = [
   {
-    title: "Banarasi Silk",
-    description: "Opulent weaves from Varanasi with intricate zari work.",
-    image: "/images/silk.png",
-    link: "/products?category=banarasi"
+    title: "Handloom Fabrics",
+    description: "Traditional handwoven fabrics made using age-old weaving techniques.",
+    image: "/images/handloom.png",
+    link: "/products?category=handloom"
   },
   {
-    title: "Organic Cotton",
-    description: "Breathable, pure, and minimal textures for everyday elegance.",
-    image: "/images/cotton.png",
-    link: "/products?category=cotton"
+    title: "Dress Materials",
+    description: "Artisan-crafted ethnic sets and unstitched suit materials.",
+    image: "/images/dress-materials.png",
+    link: "/products?category=dress-materials"
+  },
+  {
+    title: "Handicrafts & Decor",
+    description: "Handcrafted lifestyle and décor products rooted in Indian craftsmanship.",
+    image: "/images/handicrafts.png",
+    link: "/products?category=handicrafts"
+  },
+  {
+    title: "Tote Bags & Accessories",
+    description: "Handmade fabric tote bags crafted using block prints and ethnic patterns.",
+    image: "/images/tote-bags.png",
+    link: "/products?category=accessories"
   }
 ];
 

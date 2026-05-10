@@ -49,12 +49,12 @@ export default function Footer() {
             <li className="flex items-start space-x-3">
               <MapPin className="w-5 h-5 shrink-0 mt-0.5 text-mutedgold" />
               <a href="https://maps.app.goo.gl/NhyAhNCYkFWvgvtW6" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                123 Textile Market, Freeganj,<br />Ujjain, Madhya Pradesh 456010
+                8 Dasshera Maidan Ujjain<br />Pin 456010
               </a>
             </li>
             <li className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-mutedgold" />
-              <span>+91 98765 43210</span>
+              <span>+91 92292 26275</span>
             </li>
             <li className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-mutedgold" />
