@@ -36,7 +36,7 @@ export default function Navbar() {
         </div>
 
         <Link href="/" className="text-3xl font-serif tracking-wide text-center absolute left-1/2 -translate-x-1/2">
-          Kapda Gram
+          कपड़ा ग्राम
         </Link>
 
         <div className="hidden md:flex items-center space-x-6">

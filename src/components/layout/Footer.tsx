@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-deepbrown text-ivory py-16 px-4 md:px-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
-          <h2 className="text-3xl font-serif tracking-wider">Kapda Gram</h2>
+          <h2 className="text-3xl font-serif tracking-wider">कपड़ा ग्राम</h2>
           <p className="text-sand/80 text-sm leading-relaxed max-w-sm">
             Preserving the rich heritage of Indian textiles. From the heart of Ujjain, bringing you the finest handwoven fabrics.
           </p>
