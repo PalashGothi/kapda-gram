@@ -3,13 +3,20 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Menu, X, ShoppingBag, Search } from "lucide-react";
+import { Menu, X, ShoppingBag, Search, User } from "lucide-react";
+import { useCartStore } from "@/store/cart";
+import { useAuthStore } from "@/store/auth";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  const cartItemsCount = useCartStore((state) => state.totalItems());
+  const { user, logout } = useAuthStore();
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -31,7 +38,7 @@ export default function Navbar() {
             Our Story
           </Link>
           <Link href="/products" className="text-sm font-medium hover:text-mutedgold transition-colors">
-            Fabrics
+            Fabrics & Shop
           </Link>
         </div>
 
@@ -40,15 +47,25 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center space-x-6">
-          <button className="hover:text-mutedgold transition-colors">
-            <Search className="w-5 h-5" />
-          </button>
-          <Link href="/contact" className="text-sm font-medium hover:text-mutedgold transition-colors">
-            Contact
-          </Link>
-          <button className="hover:text-mutedgold transition-colors">
+          {mounted && user ? (
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-medium text-deepbrown/80 dark:text-sand/80">Hi, {user.name.split(' ')[0]}</span>
+              <button onClick={logout} className="text-xs text-terracotta hover:underline">Logout</button>
+            </div>
+          ) : (
+            <Link href="/login" className="hover:text-mutedgold transition-colors">
+              <User className="w-5 h-5" />
+            </Link>
+          )}
+
+          <Link href="/cart" className="relative hover:text-mutedgold transition-colors">
             <ShoppingBag className="w-5 h-5" />
-          </button>
+            {mounted && cartItemsCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-terracotta text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                {cartItemsCount}
+              </span>
+            )}
+          </Link>
         </div>
 
         <button
@@ -69,9 +86,15 @@ export default function Navbar() {
         >
           <div className="flex flex-col p-6 space-y-6 text-center">
             <Link href="/about" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Our Story</Link>
-            <Link href="/products" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Fabrics</Link>
-            <Link href="/gallery" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
-            <Link href="/contact" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+            <Link href="/products" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Shop</Link>
+            <Link href="/cart" className="text-lg font-medium flex items-center justify-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+              Cart {mounted && cartItemsCount > 0 && <span className="bg-terracotta text-white text-xs px-2 py-0.5 rounded-full">{cartItemsCount}</span>}
+            </Link>
+            {mounted && user ? (
+              <button onClick={() => { logout(); setIsMobileMenuOpen(false); }} className="text-lg font-medium text-terracotta">Logout ({user.name})</button>
+            ) : (
+              <Link href="/login" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
+            )}
           </div>
         </motion.div>
       )}

@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   keywords: ["Handloom fabrics India", "Indian handcrafted textiles", "Ethnic dress materials", "Handmade Indian handicrafts", "Sustainable Indian fashion", "Artisan fabrics", "Indian block print fabrics", "Handmade décor India", "Ujjain handloom store", "Indian craft products"],
 };
 
+import { Toaster } from "react-hot-toast";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
       <body className="font-sans min-h-screen flex flex-col selection:bg-mutedgold selection:text-white">
+        <Toaster position="top-center" />
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
